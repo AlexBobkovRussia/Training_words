@@ -9,7 +9,7 @@ class TrainWords:
 
     def train(self):
         score = {}
-        words = self._words
+        words = {i: self._words[i] for i in shuffle(self._words)}
         for word in self._words.keys():
             score[word] = 0
 
